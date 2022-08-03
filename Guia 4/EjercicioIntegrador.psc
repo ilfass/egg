@@ -1,5 +1,5 @@
 Algoritmo EjercicioIntegrador
-	Definir matrizTotal, letras Como Caracter
+	Definir matrizTotal, letras, testBorrar Como Caracter
 	Definir m,tamano Como Entero
 //	Escribir "especifique el tamaño de la matriz que debe ser cuadrada"
 	//	leer m
