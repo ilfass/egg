@@ -1,0 +1,27 @@
+//Teniendo en cuenta que la clave es "eureka", escribir un programa que nos pida ingresar
+//una clave. Sólo se cuenta con 3 intentos para acertar, si fallamos los 3 intentos se deberá
+//		mostrar un mensaje indicándonos que hemos agotado esos 3 intentos. Si acertamos la
+//			clave se deberá mostrar un mensaje que indique que se ha ingresado al sistema
+//			correctamente.
+
+
+Algoritmo sin_titulo
+	
+	Definir clave, claveCorrecta como cadena
+	Definir intentos Como Entero
+	intentos=3
+	claveCorrecta= "EUREKA"
+	Hacer
+		Escribir "Ingrese Clave: "
+		Leer clave
+		clave=Mayusculas(clave)
+		Si clave <> claveCorrecta Entonces
+			intentos= intentos-1
+			Escribir "Intentos restantes", intentos, "Intentos"
+		FinSi
+	Mientras Que intentos>0 Y clave <> claveCorrecta
+	Si intentos<>0 Entonces
+		Escribir "Se ingreso correctamente al sistema"
+	FinSi
+	
+FinAlgoritmo
