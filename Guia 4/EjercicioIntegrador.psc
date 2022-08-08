@@ -6,8 +6,7 @@ Algoritmo EjercicioIntegrador
 	letras= "CDDACCACCACAAABC"
 	tamano= Longitud(letras)
 	segun tamano hacer
-		9:
-			m=tamano/3
+		9:m=tamano/3
 		16:m=tamano/4
 		1369:m=tamano/37
 	FinSegun	
