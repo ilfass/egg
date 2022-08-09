@@ -5,6 +5,8 @@
  */
 package introjava;
 
+import java.util.Scanner;
+
 /**
  *
  * @author fa07f
@@ -16,8 +18,11 @@ public class Holamundo {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        System.out.println("  Hola Mundo  ");
+        Scanner leer = new Scanner(System.in);
+        String nombre;
+        System.out.println(" Ingresa tu nombre:  ");
+        nombre = leer.next();
+        System.out.println("hola mundo! soy " + nombre+ " y estoy programando en Java!");
     }
     
 }
