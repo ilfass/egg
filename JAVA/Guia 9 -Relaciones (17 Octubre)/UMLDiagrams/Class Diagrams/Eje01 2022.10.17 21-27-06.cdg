@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Eje01">
+  <ClassDiagramComponents>
+    <Class name="razaDePerros" package="Eje01" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="serviciosRaza" package="Eje01.servicios" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="raza" type="ArrayList&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="anadirRaza" returnType="void" visibility="public"/>
+        <Method name="mostrarRaza" returnType="void" visibility="public"/>
+        <Method name="pediryborrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

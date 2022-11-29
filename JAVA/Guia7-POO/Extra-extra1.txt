@@ -1,0 +1,235 @@
+package ejercicioExtraExtra01;
+
+import java.util.Objects;
+import java.util.Scanner;
+
+public class FraccionService {
+
+//       Crear una clase llamada fracción que contenga 4 atributos (denominador y numerador de cada
+//fracción). Crear la clase servicio que contenga métodos para sumar, restar, multiplicar y dividir
+//fracciones. Mostrar por pantalla un menú de opciones para que el usuario decida que ver.
+//        
+    Scanner leer = new Scanner(System.in).useDelimiter("\n");
+
+    
+    
+  
+    
+    
+    
+    public Fraccion crearFraccion() {
+
+        Fraccion fra = new Fraccion();
+
+        System.out.println("ingrese numerador f1");
+        fra.setNumeradorF1(leer.nextInt());
+
+        do {
+
+            System.out.println("ingrese denomidar F1");
+
+            fra.setDenominadorF1(leer.nextInt());
+
+        } while (fra.getDenominadorF1() < 1);
+
+        System.out.println("ingrese numerador F2");
+        fra.setNumeradorF2(leer.nextInt());
+
+        do {
+            System.out.println("ingrese denominador F2");
+
+            fra.setDenomidorF2(leer.nextInt());
+
+        } while (fra.getDenomidorF2() < 1);
+
+        return fra;
+    }
+
+    public void sumar(Fraccion fra) {
+
+        if (!Objects.equals(fra.getDenominadorF1(), fra.getDenomidorF2())) {
+            
+           
+          //  System.out.println(((fra.getNumeradorF1() * fra.getDenomidorF2()) + fra.getNumeradorF2())  * fra.getDenomidorF1() + "/" + ((fra.getNumeradorF2() * fra.getDenominadorF1()) + fra.getNumeradorF2()));
+            
+        //    System.out.println((fra.getDenominadorF1() * fra.getDenomidorF2() ) / fra.getDenominadorF1() +  );
+         
+        
+//        
+      Integer num1 = fra.getNumeradorF1();
+       Integer num2 = fra.getNumeradorF2();
+       Integer deno1 = fra.getDenominadorF1();
+       Integer deno2 = fra.getDenomidorF2();
+        
+       Integer denominadorT = fra.getDenominadorF1() * fra.getDenomidorF2();
+         Integer s = denominadorT / fra.getDenominadorF1();
+        
+            System.out.println(((num1*deno2)+num2*deno1) + "/" + (deno2*deno1));
+
+        
+         
+         
+         
+         
+         
+         
+         
+         
+         
+      //      System.out.println( s + ( s + fra.getDenominadorF1()) + "/" + denominadorT );
+
+//               System.out.println((fra.getNumeradorF1() * fra.getDenomidorF2()) +
+//                      ( fra.getNumeradorF2() * fra.getDenominadorF1()) + "/"  (fra.getDenominadorF1() * fra.getDenomidorF2()));
+        
+        
+        
+        } else {
+            System.out.println((fra.getNumeradorF1() + fra.getNumeradorF2()) + "/" + fra.getDenominadorF1());
+        }
+
+    }
+
+    public void restar(Fraccion fra) {
+
+        if (!Objects.equals(fra.getDenominadorF1(), fra.getDenomidorF2())) {
+            System.out.println(((fra.getNumeradorF1() * fra.getDenomidorF2()) - fra.getNumeradorF2())
+                    + "/" + ((fra.getNumeradorF2() * fra.getDenominadorF1()) - fra.getNumeradorF1()));
+        } else {
+            System.out.println((fra.getNumeradorF1() - fra.getNumeradorF2()) + "/" + fra.getDenominadorF1());
+        }
+    }
+
+    public void multiplicar(Fraccion fra) {
+        System.out.println(fra.getNumeradorF1() * fra.getNumeradorF2() + "/" + fra.getDenominadorF1() * fra.getDenomidorF2());
+    }
+
+    public void dividir(Fraccion fra) {
+        System.out.println(fra.getNumeradorF1() * fra.getDenomidorF2() + "/" + fra.getDenominadorF1() * fra.getNumeradorF2());
+    }
+
+}
+
+
+package ejercicioExtraExtra01;
+
+public class Fraccion {
+
+    private Integer denominadorF1;
+    private Integer numeradorF1;
+    private Integer denomidorF2;
+    private Integer numeradorF2;
+           
+    
+    
+    public Fraccion() {
+    }
+
+    public Fraccion(Integer denominadorF1, Integer numeradorF1, Integer denomidorF2, Integer numeradorF2) {
+        this.denominadorF1 = denominadorF1;
+        this.numeradorF1 = numeradorF1;
+        this.denomidorF2 = denomidorF2;
+        this.numeradorF2 = numeradorF2;
+    }
+
+    public Integer getDenominadorF1() {
+        return denominadorF1;
+    }
+
+    public void setDenominadorF1(Integer denominadorF1) {
+        this.denominadorF1 = denominadorF1;
+    }
+
+    public Integer getNumeradorF1() {
+        return numeradorF1;
+    }
+
+    public void setNumeradorF1(Integer numeradorF1) {
+        this.numeradorF1 = numeradorF1;
+    }
+
+    public Integer getDenomidorF2() {
+        return denomidorF2;
+    }
+
+    public void setDenomidorF2(Integer denomidorF2) {
+        this.denomidorF2 = denomidorF2;
+    }
+
+    public Integer getNumeradorF2() {
+        return numeradorF2;
+    }
+
+    public void setNumeradorF2(Integer numeradorF2) {
+        this.numeradorF2 = numeradorF2;
+    }
+
+    
+    
+    
+    
+}
+
+package ejercicioExtraExtra01;
+
+import java.util.Scanner;
+
+public class NewMain {
+
+    public static void main(String[] args) {
+
+//        
+//      Crear una clase llamada fracción que contenga 4 atributos (denominador y numerador de cada
+//fracción). Crear la clase servicio que contenga métodos para sumar, restar, multiplicar y dividir
+//fracciones. Mostrar por pantalla un menú de opciones para que el usuario decida que ver.
+//        
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+
+        while (true) {
+
+              FraccionService serv = new FraccionService();
+            Fraccion fra = serv.crearFraccion();
+
+            
+            System.out.println("ingrese la opcion que desea realizar");
+            System.out.println("sumar / S");
+            System.out.println("restar / R");
+            System.out.println("Dividir / D");
+            System.out.println("multiplicar / M");
+            System.out.println("Exit / E");
+
+          
+            String opcion = leer.next();
+           
+            
+            
+            switch (opcion.toLowerCase()) {
+                case "s":
+                    serv.sumar(fra);
+                    break;
+                case "r":
+                    serv.restar(fra);
+                    break;
+                case "d":
+                     serv.dividir(fra);
+                     break;
+                case "m" :
+                    serv.multiplicar(fra);
+                    break;
+                case "e" :
+                    System.exit(0);
+                    break;
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
